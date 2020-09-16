@@ -5,7 +5,7 @@ import React, { useEffect, useState, Fragment } from 'react';
 
 
 function App() {
-  //Verify if Location active
+  //Verify if Location is active
   const [ location, setLocation  ] = useState(false);
 
 
@@ -19,17 +19,17 @@ function App() {
 
   
   
-  if (location == false){
+  if (location !== false){
     return(
-      <Fragment>
-          <h3>Voce Precisa habilitar a localizacao</h3>
-      </Fragment>
+        <div>
+            <h3>Location Disable...</h3>
+        </div>
     );
   }else{
    return (
-      <div>
-          <h3>Huehueheue</h3>
-      </div>
+      <Fragment>
+          <h3>Please, active location!</h3>
+      </Fragment>
     );
   }
 
